@@ -1,0 +1,51 @@
+Applied Cryptography
+Optional homework solutions
+
+Name:
+E-mail:
+
+================================================
+Challenge-01: Meet NataSHA (5 points)
+------------------------------------------------
+The recovered key:
+<copy the key here>
+
+The recovered plaintext blocks (both of them):
+<copy the plaintext here>
+
+Steps of your solution:
+<brief description that is just enough to reproduce your solution>
+
+
+
+Put your attack script and all files that it uses in a folder named meet_natasha, zip the folder, and submit also meet_natasha.zip. We should be able to unzip the submitted file and run your script without any additional effort.
+
+
+===============================================
+Challenge-02: Iterative Guessing (5 points)
+-----------------------------------------------
+The decrypted payload:
+<copy the entire decrypted payload (including the flag) here>
+
+Steps of your solution:
+<brief description that is just enough to reproduce your solution>
+
+
+
+Put your attack script and all files that it uses in a folder named iterative_guessing, zip the folder, and submit also iterative_guessing.zip. We should be able to unzip the submitted file and run your script without any additional effort.
+
+
+===============================================
+Challenge-03: Encrypted Display Control (5 points)
+-----------------------------------------------
+
+The displayed message:
+<copy here the message printed on the display>
+
+
+Steps of your solution:
+<brief description that is just enough to reproduce your solution>
+
+
+
+Put your attack script and all files that it uses in a folder named enc_display_ctr, zip the folder, and submit also enc_display_ctrl.zip. We should be able to unzip the submitted file and run your script without any additional effort.
