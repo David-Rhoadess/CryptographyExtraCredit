@@ -1,5 +1,6 @@
 #Based on Natasha.py which was given in the assignment
 
+import numpy as np
 from Crypto.Hash import SHA
 from Crypto.Util.strxor import strxor 
 
@@ -56,14 +57,12 @@ def DEC(Y, K):
     X = strxor(L, R)
     return X
 
+numpyArr = np.array([bytes([i,j,k]) for i in range(256) for j in range(256) for k in range(256)])
 
-file = open("firsthalf.txt", "w")
-possibleDecodings = []
-for byte1 in range(256):
-    print(byte1)
-    for byte2 in range(256):
-        for byte3 in range(256):
-                (possibleDecodings.append(DEC(block1, (bytes([byte1, byte2, byte3])))))
+f = lambda x: DEC(block1, x)
+
+possibleDecodings = f(numpyArr)
+
 
 with open("firsthalf.bin", "wb") as binary_file:
     binary_file.write(possibleDecodings, separator = ",")
