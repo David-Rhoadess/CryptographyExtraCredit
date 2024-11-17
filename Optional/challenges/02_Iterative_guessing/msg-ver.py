@@ -3,9 +3,9 @@ from Crypto.Cipher import AES
 from Crypto.Hash import SHA256, HMAC
 from Crypto import Random
 
-statefile = "rcvstate.txt"
-inputfile = ""
-outputfile = ""
+statefile = "challenges/02_Iterative_guessing/prngstate.txt"
+inputfile = "challenges/02_Iterative_guessing/message.bin"
+outputfile = "challenges/02_Iterative_guessing/dummyoutput.txt"
 
 try:
     opts, args = getopt.getopt(sys.argv[1:],'hi:o:')

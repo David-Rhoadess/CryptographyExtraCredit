@@ -1,20 +1,25 @@
 Applied Cryptography
 Optional homework solutions
 
-Name:
-E-mail:
+Name: David Rhoades
+E-mail: rhoadesd@grinnell.edu
 
 ================================================
 Challenge-01: Meet NataSHA (5 points)
 ------------------------------------------------
 The recovered key:
-<copy the key here>
+3bf1ce3e4dfc
+(0x3bf1ce3e4dfc)
 
 The recovered plaintext blocks (both of them):
-<copy the plaintext here>
+Meet_NataSHA_which_is_not_a_SHA_although
+_we_use_it_not_to_hash_but_to_encrypt...
 
 Steps of your solution:
-<brief description that is just enough to reproduce your solution>
+I minicked the meet in the middle attack we used for challenge 3. First I modified the given decryption function to only take 3 key bytes and to decrypt input with only 3 rounds. Next, I modified the given encryption function to
+only take 2 key bits and to only encrypt input through 2 rounds. Next, I used the given plaintext-ciphertext pair. I fed the ciphertext into my decryption function with every possible combination or 3 bytes and saved the output
+in a dictionary to keep track of what keys generated what output. Next I fed the plaintext into my encryption funtion with every possible combination of 2 bytes, after each encryption I checked to see if the output was in the
+array I previously generated. If it is, 
 
 
 
@@ -25,7 +30,11 @@ Put your attack script and all files that it uses in a folder named meet_natasha
 Challenge-02: Iterative Guessing (5 points)
 -----------------------------------------------
 The decrypted payload:
-<copy the entire decrypted payload (including the flag) here>
+All computers are hackable. This has as much to do with the computer market as it does with the technologies. We prefer our software full of features and inexpensive, at the expense of security and reliability. That your computer can affect the security of Twitter is a market failure. The industry is filled with market failures that, until now, have been largely ignorable. As computers continue to permeate our homes, cars, businesses, these market failures will no longer be tolerable. Our only solution will be regulation, and that regulation will be foisted on us by a government desperate to "do something" in the face of disaster.
+
+FLAG: 76bb5fe76d87d3bff541f78d6c6156b5
+
+Your modern refrigerator is a computer that keeps things cold. Your oven, similarly, is a computer that makes things hot. An ATM is a computer with money inside. Your car is no longer a mechanical device with some computers inside; it's a computer with four wheels and an engine. Actually, it's a distributed system of over 100 computers with four wheels and an engine. And, of course, your phones became full-power general-purpose computers in 2007, when the iPhone was introduced.
 
 Steps of your solution:
 <brief description that is just enough to reproduce your solution>

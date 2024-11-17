@@ -3,7 +3,7 @@ from Crypto.Cipher import AES
 from Crypto.Hash import SHA256, HMAC
 from Crypto import Random
 
-statefile = "sndstate.txt"
+statefile = "prngstate.txt"
 inputfile = ""
 outputfile = ""
 
