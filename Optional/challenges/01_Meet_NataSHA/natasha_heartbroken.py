@@ -21,8 +21,6 @@ block1 = bytes.fromhex('ae055b48d8fa60bc337ff846ee88fe33c7e026a5ea54dbb59814c682
 block2 = bytes.fromhex('8c4febe7e2f0a6d43110d37576535b8518eaa4b7ce3ac3722816062755aa8b5ed82eadf76e8af6f5')
 
 def DEC2(Y, K):
-
-    #raise TypeError("balls")
     if type(K) != bytes:
         raise TypeError("Key must be of type bytes!")
         return

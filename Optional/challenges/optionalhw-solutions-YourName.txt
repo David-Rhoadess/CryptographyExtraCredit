@@ -19,7 +19,8 @@ Steps of your solution:
 I minicked the meet in the middle attack we used for challenge 3. First I modified the given decryption function to only take 3 key bytes and to decrypt input with only 3 rounds. Next, I modified the given encryption function to
 only take 2 key bits and to only encrypt input through 2 rounds. Next, I used the given plaintext-ciphertext pair. I fed the ciphertext into my decryption function with every possible combination or 3 bytes and saved the output
 in a dictionary to keep track of what keys generated what output. Next I fed the plaintext into my encryption funtion with every possible combination of 2 bytes, after each encryption I checked to see if the output was in the
-array I previously generated. If it is, 
+keys of the dictionary I previously generated. If it is, I take the K3, K4, K5 associated with the match in the dictionary and append the K0, K1 used to find the match. Finally, I brute force the last bit of the key (K3) by trying all bits until.
+one of them properly encrypts the the known plaintext to the know ciphertext.
 
 
 
@@ -37,7 +38,9 @@ FLAG: 76bb5fe76d87d3bff541f78d6c6156b5
 Your modern refrigerator is a computer that keeps things cold. Your oven, similarly, is a computer that makes things hot. An ATM is a computer with money inside. Your car is no longer a mechanical device with some computers inside; it's a computer with four wheels and an engine. Actually, it's a distributed system of over 100 computers with four wheels and an engine. And, of course, your phones became full-power general-purpose computers in 2007, when the iPhone was introduced.
 
 Steps of your solution:
-<brief description that is just enough to reproduce your solution>
+I started by building an array with every possible timestamp from the minute before the message was first seen. Next, I generated every possible mac key based on the possible timestamps and the know start state. Next, I found the correct mac key by
+generating mac keys based on the potential keys (and the message) and checking if they match the know mac. Once I found a match, I generated the new state by xoring the old state and the mac key. Next I repeated the process to find the encryption key.
+I checked keys by decrypting the message with the potential key and them attempting to remove the padding. If the padding is removed successfully and the plaintext contains 'FLAG' then we have found the correct key.
 
 
 
